@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block pm %}
+<div class="row mb-5">
+<div class="col-sm-3 mt-4"></div>
+<div class="col-sm-6 mt-4 shadow">
+     <h1 style="text-align:center;">Sign Up</h1>
+    <form action="" method="POST" enctype="multipart/form-data">{% csrf_token %}
+    {% if form.non_field_errors %}
+        {% for error in form.non_field_errors %}
+           <span class="a" >{{error}}</span>
+        {% endfor %}
+        <br>
+    {% endif %}
+
+    {% for fm in form %}
+      <div class="form-group mb-2">
+        {{fm.label_tag}} {{fm}} {{fm.errors|striptags}}
+      </div>
+    {% endfor %}
+    <div>
+    <br>
+    <input type="submit" value="submit" class="btn btn-info">
+    <a href="{% url 'loginusr' %}" class="btn btn-info float-right">Login</a>
+    </div>
+    </form>
+
+    {% if messages %}
+      {% for msg in messages%} 
+       <span{% if msg.tags %}  class="{{msg.tags}}" {% endif %}> <span>
+         <b>{{ form.username.value }}</b> {{ msg }}
+      {% endfor %}
+    {% endif %}
+    <br>
+    <br>
+</div> 
+<div class="col-sm-3 mt-4"></div>
+</div>
+{% endblock %}

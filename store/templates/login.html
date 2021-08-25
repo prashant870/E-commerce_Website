@@ -1,0 +1,29 @@
+{% extends 'base.html'%} {% block pm %}
+<div class="row my-5">
+  <div class="col-sm-3 mt-4"></div>
+  <div class="col-sm-6 mt-4 shadow">
+    <h1 class="my-3" style="text-align: center">Login Page</h1>
+    <form action="" method="POST" novalidate>
+      {% csrf_token %} 
+      {% if form.non_field_errors %} 
+      {% for error in form.non_field_errors %}
+      <span class="a1">{{error}}</span>
+      {% endfor %}
+      <br />
+      {% endif %} {% for fm in form %}
+      <div class="form-group">
+        {{fm.label_tag}} {{fm}} {{fm.errors|striptags}}
+      </div>
+      {% endfor %}
+
+      <input type="submit" value="Login" class="btn btn-info" role="button" />
+    </form>
+    <br />
+    <a href="{% url 'signup' %}" class="btn btn-info" role="button">Signup</a>
+    <br />
+    <br />
+  </div>
+  <div class="col-sm-3 mt-4"></div>
+  <br />
+</div>
+{% endblock %}

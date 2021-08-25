@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prashant Maurya</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'store/css/all.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'store/css/bootstrap.css' %}" />
+
+    <script src="{% static 'store/js/bootstrap.js'%}"></script>
+    <script src="{% static 'store/js/jquery.js'%}"></script>
+    <script src="{% static 'store/js/popper.js'%}"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    {% include 'navbar.html' %}
+    <div class="container-fluid">
+    {% block pm %} {% endblock pm %}
+    </div>
+  
+
+  <footer class="site-footer bg-primary sticky-bottom">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-3 mb-5 list-unstyled">
+          <h5 style="color: black">About us</h5>
+          <li><a href="#" style="color: white">Contact Us</a></li>
+          <li><a href="#" style="color: white">About Us</a></li>
+          <li><a href="#" style="color: white">Careers</a></li>
+          <li><a href="#" style="color: white">Emark Stories</a></li>
+          <li><a href="#" style="color: white">Emark Wholesale</a></li>
+        </div>
+
+        <div class="col-md-3 mb-5 list-unstyled text-center">
+          <h5 style="color: black">Social</h5>
+          <li>
+            <a href="https://www.facebook.com/profile.php?id=100070357322894" style="color: white"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+          </li>
+          <li><a href="#" style="color: white"><span class="fab fa-twitter"></a></li>
+          <li><a href="https://www.instagram.com/sonugolu2018/" style="color: white"><span class="fab fa-instagram"></a></li>
+          <li><a href="https://www.linkedin.com/in/prashant-maurya-329614188/" style="color: white"><span class="fab fa-linkedin"></a></li>
+        </div>
+
+        <div class="col-md-3 mb-5 list-unstyled">
+          <h5 style="color: black">Mail Us</h5>
+          <p style="color:white;">Esop Internet Private Limited,<br>
+          Kachhwa Bazar,<br>
+          Kachhwa,Mirzapur,131501,<br>
+          Uttar Pradesh,India</p>
+        </div>
+
+        <div class="col-md-3 mb-5 list-unstyled">
+          <h5 style="color: black">Registered Office Address</h5>
+          <p style="color:white;">
+          Eshop Internet Private Limited,<br>
+          Buildings Alyssa, Bhawar <br>
+          Clove Embassy Tech Village,<br>
+          Outer Ring Road, Devarabeesanahalli Village,<br>
+          Kachhwa, 231501,<br>
+          Mirzapur,Uttar Pradesh, India <br>
+          CIN : U51109KA2012PTC066107 <br>
+          Telephone: 1800 202 9898 <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright text-center shadow">
+    Copyright &copy; 2021 <span>Eshop</span>
+    </div>
+  </footer>
+  </body>
+</html>
